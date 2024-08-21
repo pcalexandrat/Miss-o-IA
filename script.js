@@ -71,16 +71,11 @@ function mostraAlternativas(){
     }
 }
 
-function respostaSelecionada(opcaoSelecionada){
-    const afirmacao = opcaoSelecionada.afirmacoes;
-    historiaFinal = afirmacao;
-    atual++;
-    mostraPergunta();
-}
+
 function respostaSelecionada(opcaoSelecionada) {
     const afirmacoes = opcaoSelecionada.afirmacao;
     historiaFinal += afirmacoes + " ";
-    atual++
+    atual++;
    
 }
 function mostraResultado(){
@@ -88,7 +83,5 @@ function mostraResultado(){
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
-
-
 
 mostraPergunta();
