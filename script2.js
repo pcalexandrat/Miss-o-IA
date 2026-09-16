@@ -10,8 +10,7 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Utilizando palestras para prevenir o cyberbullying nas escolas.", 
-                afirmacao: "Você é uma pessoa reflexiva e busca aprendizado e conhecimento.",
-                           "Apesar de buscar sempre conhecimento, você tem preocupação com o desconhecido"
+                afirmacao: "Você é uma pessoa reflexiva e busca aprendizado e conhecimento."
             },
             {
                 texto:  "Prestando atenção aos sinais de cyberbullying nas escolas.",
@@ -67,12 +66,6 @@ function mostraPergunta(){
     caixaAlternativas.textContent = "";
     mostraAlternativas();
 }
-
-function aleatorio(lista) {
-const posicao = Math.floor(Math.random()* lista.length);
-return lista[posicao];
-}
-
 function mostraAlternativas(){
     for(const alternativa of perguntaAtual.alternativas){
         const botaoAlternativas = document.createElement("button");
@@ -83,7 +76,7 @@ function mostraAlternativas(){
 
 }
 function respostaSelecionada(opcaoSelecionada) {
-    const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
+    const afirmacoes = opcaoSelecionada.afirmacao;
     historiaFinal += afirmacoes + " ";
     atual++
     mostraPergunta();
