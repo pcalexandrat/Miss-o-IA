@@ -1,11 +1,11 @@
-import {aleatorio} from ‘./aleatorio.js’;
-import {perguntas} from ‘./perguntas.js;
+import {aleatorio} from './aleatorio.js';
+import {perguntas} from './perguntas.js';
 const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
-
+const botaoJogarNovamente = document.querySelector(".novamente-btn");
 
    
 let atual = 0;
@@ -23,10 +23,7 @@ function mostraPergunta(){
     mostraAlternativas();
 }
 
-function aleatorio(lista) {
-const posicao = Math.floor(Math.random()* lista.length);
-return lista[posicao];
-}
+
 function mostraAlternativas(){
     for(const alternativa of perguntaAtual.alternativas){
         const botaoAlternativas = document.createElement("button");
@@ -47,8 +44,13 @@ function mostraResultado(){
     caixaPerguntas.textContent = "Olha só o que podemos afirmar sobre você...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
+    botaoJogarNovamente.addEventListener("click", jogaNovamente());
 }
 
+function jogaNovamente(){
+    atual = 0;
+    historiaFinal = "";
+}
+    mostraPergunta();
 
 
-mostraPergunta();
