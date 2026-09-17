@@ -73,6 +73,10 @@ function mostraPergunta(){
     mostraAlternativas();
 }
 
+function aleatorio(lista) {
+const posicao = Math.floor(Math.random()* lista.length);
+return lista[posicao];
+}
 function mostraAlternativas(){
     for(const alternativa of perguntaAtual.alternativas){
         const botaoAlternativas = document.createElement("button");
@@ -84,9 +88,10 @@ function mostraAlternativas(){
 }
 function respostaSelecionada(opcaoSelecionada) {
     const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
-    historiaFinal += afirmacoes + " ";
-    atual++
-    mostraPergunta();
+historiaFinal += afirmacoes + " ";
+atual++;
+mostraPergunta();
+
 }
 function mostraResultado(){
     caixaPerguntas.textContent = "Olha só o que podemos afirmar sobre você...";
