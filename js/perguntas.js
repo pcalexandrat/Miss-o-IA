@@ -50,7 +50,7 @@ export const perguntas = [
                     texto:    "Apenas ocasionalmente ou raramente. Às vezes minha autoestima oscila e isso pode afetar negativamente minha qualidade de vida em certas ocasiões.",
                 
                     afirmacao: ["Você demomostra que precisa se conhecer mais e mostra uma consciência de uma crescente necessidade de cuidar mais da própria percepção e bem-estar emocional.",
-                                "................................"
+                                "Você percebe uma necessidade cada vez maior de se autoconhecer e dar prioridade ao seu bem-estar emocional."
                     ]
                     }    
                
