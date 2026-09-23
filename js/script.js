@@ -11,13 +11,14 @@ const botaoJogarNovamente = document.querySelector(".novamente-btn");
 let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
-mostraPergunta();
+
 
 function mostraPergunta(){
     if(atual >= perguntas.length){
         mostraResultado();
         return;
     }
+    
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
     caixaAlternativas.textContent = "";
