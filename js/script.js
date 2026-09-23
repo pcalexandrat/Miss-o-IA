@@ -11,6 +11,7 @@ const botaoJogarNovamente = document.querySelector(".novamente-btn");
 let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
+mostraPergunta();
 
 function mostraPergunta(){
     if(atual >= perguntas.length){
@@ -40,15 +41,11 @@ atual++;
 mostraPergunta();
 }
 
-function aleatorio(lista) {
-const posicao = Math.floor(Math.random()* lista.length);
-return lista[posicao];
-}
-
 function mostraResultado(){
     caixaPerguntas.textContent = "Olha só o que podemos afirmar sobre você...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
+    caixaResultado.classList.add("mostrar");
     botaoJogarNovamente.addEventListener("click", jogaNovamente());
 }
 
